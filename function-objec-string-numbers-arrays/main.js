@@ -322,11 +322,11 @@
 //   return item;
 // });
 // console.log(arabalarr);
-// const arabalar1 = arabalar.map(function (item) {
-//   console.log(item);
-//   return item + " " + "son model";
-// });
-// console.log(arabalar1);
+const arabalar1 = arabalar.map(function (item) {
+  console.log(item);
+  return item + " " + "son model";
+});
+console.log(arabalar1);
 // //* map her döndüğü dizi elemanı için yeni bir dizi oluşturur, forEach ise tüm elemanları gezer.
 
 // const arabalar2 = arabalar.flatMap(degerleriGezMap);
@@ -395,7 +395,9 @@ document.write(tarih.getDay(), "<br/>");
 document.write(tarih.getFullYear(), "<br/>");
 document.write(tarih.getHours(), "<br/>");
 document.write(tarih.getMinutes(), "<br/>");
-document.write(tarih.getMonth(), "<br/>");
+document.write(tarih.getMonth() + 1, "<br/>");
 document.write(tarih.getSeconds(), "<br/>");
 document.write(tarih.getMilliseconds(), "<br/>");
 document.write(tarih.getTime(), "<br/>");
+
+const aylar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
