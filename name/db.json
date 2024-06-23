@@ -1,0 +1,26 @@
+{
+  "neighborhood": [
+    {
+      "houseNumber": 1,
+      "surname": "Yılmaz",
+      "totalLanguagesSpoken": 3,
+      "familyMembers": {
+        "total": 4,
+        "women": 2,
+        "men": 2
+      },
+      "languages": ["Turkish", "English", "German"]
+    },
+    {
+      "houseNumber": 2,
+      "surname": "Kaya",
+      "totalLanguagesSpoken": 2,
+      "familyMembers": {
+        "total": 3,
+        "women": 1,
+        "men": 2
+      },
+      "languages": ["Turkish", "French"]
+    }
+  ]
+}

@@ -331,100 +331,126 @@
 /*
  * Set => Benzsersiz değerleri saklamak için kullanılır
  */
-// set oluşturma
-const mySet = new Set();
-// set'e eleman ekleme
-mySet.add(1);
-mySet.add(2);
-mySet.add(2);
-mySet.add(1);
-mySet.add(3);
-mySet.add(3);
-mySet.add(3);
-mySet.add(3);
-mySet.add(3);
-mySet.add(3);
-mySet.add(4);
+// // set oluşturma
+// const mySet = new Set();
+// // set'e eleman ekleme
+// mySet.add(1);
+// mySet.add(2);
+// mySet.add(2);
+// mySet.add(1);
+// mySet.add(3);
+// mySet.add(3);
+// mySet.add(3);
+// mySet.add(3);
+// mySet.add(3);
+// mySet.add(3);
+// mySet.add(4);
 
-console.log("mySet>>", mySet);
-console.log("mySet eleman sayısı>>", mySet.size);
+// console.log("mySet>>", mySet);
+// console.log("mySet eleman sayısı>>", mySet.size);
 
-for (const item of mySet) {
-  console.log("item", item);
-}
+// for (const item of mySet) {
+//   console.log("item", item);
+// }
 
-console.log(mySet.has(2)); // true gelir bu değer içerisinde bulunuyor
-console.log(mySet.has(5)); // false gelir bu değer içerisinde bulunmuyor
+// console.log(mySet.has(2)); // true gelir bu değer içerisinde bulunuyor
+// console.log(mySet.has(5)); // false gelir bu değer içerisinde bulunmuyor
 
-mySet.delete(2); // silme işlemi için delete kullanılır
-console.log("Silme işlemi sonrasında set>>", mySet);
+// mySet.delete(2); // silme işlemi için delete kullanılır
+// console.log("Silme işlemi sonrasında set>>", mySet);
 
-mySet.forEach(function (item) {
-  console.log("foreach ile item", item);
-});
-mySet.clear(); // seti temizlemek için kullanılır
-console.log(mySet);
+// mySet.forEach(function (item) {
+//   console.log("foreach ile item", item);
+// });
+// mySet.clear(); // seti temizlemek için kullanılır
+// console.log(mySet);
 
-const myMap = new Map();
+// const myMap = new Map();
 /*
   Bir anahtar değer çiftlerini depolamak için kullanılır.
   Herbir anahtar benzersiz olmalıdır.
-*/
-myMap.set("apple", "15 Tl");
-myMap.set("apple", "10 Tl");
-myMap.set("orange", "20 Tl");
-myMap.set("banana", "15 Tl");
-myMap.set("apple", "1 Tl");
+// */
+// myMap.set("apple", "15 Tl");
+// myMap.set("apple", "10 Tl");
+// myMap.set("orange", "20 Tl");
+// myMap.set("banana", "15 Tl");
+// myMap.set("apple", "1 Tl");
 
-console.log(myMap);
+// console.log(myMap);
 
-// Değerlere erişim sağlarken get metodu kullanılır ve bizden key ister
-console.log(myMap.get("apple"));
-// Boyutunu kontrol etmek için kullanılır
-console.log(myMap.size);
-// Map içindeki anahtar-değer çiftlerini döngüyle gezinme
-myMap.forEach(function (value, key) {
-  console.log(`${key} fiyatı => ${value}`);
-});
-// Bir anahtarın mapte olup olmadığını kontrol ederiz
-console.log(myMap.has("apple"));
-console.log(myMap.has("chery"));
-// Bir anahtar-değer çifti silmek için kullanırız.
-myMap.delete("orange");
-console.log(myMap);
-// Tüm anahtar-değer çiftlerini temizler
-myMap.clear();
-console.log(myMap);
+// // Değerlere erişim sağlarken get metodu kullanılır ve bizden key ister
+// console.log(myMap.get("apple"));
+// // Boyutunu kontrol etmek için kullanılır
+// console.log(myMap.size);
+// // Map içindeki anahtar-değer çiftlerini döngüyle gezinme
+// myMap.forEach(function (value, key) {
+//   console.log(`${key} fiyatı => ${value}`);
+// });
+// // Bir anahtarın mapte olup olmadığını kontrol ederiz
+// console.log(myMap.has("apple"));
+// console.log(myMap.has("chery"));
+// // Bir anahtar-değer çifti silmek için kullanırız.
+// myMap.delete("orange");
+// console.log(myMap);
+// // Tüm anahtar-değer çiftlerini temizler
+// myMap.clear();
+// console.log(myMap);
 
-/*******************************************************************/
-// primitive data (ilkel veri tipi)
-// string,number,boolean,undefined,null,bigint,symbol
+// /*******************************************************************/
+// // primitive data (ilkel veri tipi)
+// // string,number,boolean,undefined,null,bigint,symbol
 
-let name = "veli";
-let age = 30;
-let isStudent = false;
-let telNo = null;
+// let name = "veli";
+// let age = 30;
+// let isStudent = false;
+// let telNo = null;
 
-// complex data (karmaşık veri tip)
+// // complex data (karmaşık veri tip)
 
-let person = {
-  name: "Veli",
-  age: 30,
-  city: "Samsun",
+// let person = {
+//   name: "Veli",
+//   age: 30,
+//   city: "Samsun",
+// };
+// let products = ["Elma", "Armut", "Portakal"];
+// let orders = [
+//   {
+//     product: "Telefon",
+//     price: 1000,
+//   },
+//   {
+//     product: "Bilgisayar",
+//     price: 2000,
+//   },
+// ];
+
+// console.log(name);
+// console.log(person.age);
+// console.log(products[0]);
+// console.log(orders[0].product);
+
+// let sayi = null;
+
+// console.log(sayi);
+
+const person1 = {
+  name: "ali",
+  city: "İstanbul",
+  age: 22,
 };
-let products = ["Elma", "Armut", "Portakal"];
-let orders = [
-  {
-    product: "Telefon",
-    price: 1000,
-  },
-  {
-    product: "Bilgisayar",
-    price: 2000,
-  },
-];
 
-console.log(name);
-console.log(person.age);
-console.log(products[0]);
-console.log(orders[0].product);
+let sayi;
+
+const arr = ["Antalya", "Samsun", "İstanbul"];
+
+console.log(typeof 1);
+console.log(typeof "test");
+console.log(typeof person1);
+console.log(typeof arr);
+console.log(typeof sayi);
+
+typeof undefined; // undefined
+typeof null; // object
+
+console.log(null === undefined);
+console.log(null == undefined);
