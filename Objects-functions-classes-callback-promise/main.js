@@ -343,22 +343,20 @@ function ekranaAdYaz() {
  * 3.Rejected:İşlem başarısız oldu veya hata aldı.
  */
 
-// let promise = new Promise(function (resolve, reject) {
-//   setTimeout(function () {
-//     let success = false;
-//     if (success) {
-//       resolve("İşlem başarıyla gerçekleşti");
-//     } else {
-//       reject("İşlem başarısız oldu");
-//     }
-//   }, 1000);
-// });
+let promise = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    let success = false;
+    if (success) {
+      resolve("İşlem başarıyla gerçekleşti");
+    } else {
+      reject("İşlem başarısız oldu");
+    }
+  }, 1000);
+});
 
-// console.log(promise);
-
-// promise
-//   .then((message) => console.log("Başarılı", message))
-//   .catch((error) => console.log("Hata", error));
+promise
+  .then((message) => console.log("Başarılı:", message))
+  .catch((error) => console.log("Hata", error));
 
 let veriAlIstek = new Promise(function (cozum, redEdilme) {
   let req = new XMLHttpRequest(); // internete istek atıp veri alma/gönderimi alma
