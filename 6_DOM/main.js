@@ -214,3 +214,10 @@ console.log(newItem);
 const oldItem = document.getElementById("oldItem");
 //* replaceChild:Mevcut bir elementin yerini yeni bir elementle değiştirmek için kullanırız
 myList.replaceChild(newItem, oldItem);
+
+const myCollection = document.getElementsByTagName("p");
+console.log(myCollection);
+
+for (let i = 0; i < myCollection.length; i++) {
+  myCollection[i].style.color = "red";
+}
