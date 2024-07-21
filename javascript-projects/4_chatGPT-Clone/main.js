@@ -66,6 +66,7 @@ const getChatResponse = async (incomingChatDiv) => {
   incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
   //* Inputun içerisini boş bırak
   chatInput.value = null;
+  saveChatHistory();
 };
 
 const showTypingAnimation = () => {
@@ -134,8 +135,10 @@ deleteButton.addEventListener("click", () => {
    * Tamam tuşuna basıldığında true dönderiririz
    * İptal tuşuna basıldığındad false dönderir
    */
-  if (confirm("Tüm sohbetleri silmek istediğinizden emin misiniz?"))
+  if (confirm("Tüm sohbetleri silmek istediğinizden emin misiniz?")) {
     chatContainer.remove();
+    localStorage.removeItem("chatHistory");
+  }
 
   const defaultText = `
      <div class="default-text">
@@ -165,3 +168,17 @@ deleteButton.addEventListener("click", () => {
   `;
   document.body.innerHTML = defaultText;
 });
+//* localStorage veriyi ekleme
+const saveChatHistory = () => {
+  localStorage.setItem("chatHistory", chatContainer.innerHTML);
+};
+
+const loadChatContainer = () => {
+  const chatHistory = localStorage.getItem("chatHistory");
+  if (chatHistory) {
+    chatContainer.innerHTML = chatHistory;
+    defaultText.remove();
+  }
+};
+
+document.addEventListener("DOMContentLoaded", loadChatContainer);
