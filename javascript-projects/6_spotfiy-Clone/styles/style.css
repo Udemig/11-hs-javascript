@@ -147,7 +147,101 @@ main header form #menu {
     display: flex;
   }
 }
+main .songs h2 {
+  padding: 10px;
+  cursor: pointer;
+}
+main .songs h2:hover {
+  text-decoration: underline;
+}
+main .songs .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+main .songs .list .card {
+  background: #121212;
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px; /*silinebilir*/
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main .songs .list .card:hover {
+  opacity: 1;
+}
+main .songs .list .card h4 {
+  margin-bottom: 6px;
+}
+main .songs .list .card:hover .play {
+  opacity: 1;
+  bottom: 80px;
+}
+main .songs .list .card figure {
+  position: relative;
+}
+main .songs .list .card figure img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+main .songs .list .card figure .play {
+  background: #18d860;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+main .songs .list .card figure .play:hover {
+  scale: 1.2;
+  background: #159845;
+}
 
+.playing {
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(to right, black, #01703c);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info p {
+  color: #d6eab5;
+  margin-bottom: 5px;
+}
+.playing .info img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.animate {
+  animation: turn 3s infinite linear;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
